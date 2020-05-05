@@ -15,7 +15,7 @@ For this assignment, you'll be creating an app to view a collection of fictional
 
 You may choose from one of the following APIs.
 
-* [Star Wars API](https://swapi.co/)
+* [Star Wars API](https://swapi.dev/)
 * [Pokemon API](https://pokeapi.co/)
 * [Rick and Morty API](https://rickandmortyapi.com/)
 

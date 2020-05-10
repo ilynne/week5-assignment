@@ -1,0 +1,14 @@
+.main-content-container {
+
+}
+.character-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.character-container {
+  margin-bottom: 1em;
+  border: 1px solid chartreuse;
+}

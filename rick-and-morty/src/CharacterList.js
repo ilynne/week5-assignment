@@ -11,7 +11,8 @@ export default class CharacterList extends React.Component {
       <div>
         <CharacterPageNavigator
           info={info}
-          setCharacterListUrl={this.props.setCharacterListUrl}
+          characterListPageNumber={this.props.characterListPageNumber}
+          setCharacterListPageNumber={this.props.setCharacterListPageNumber}
         >
         </CharacterPageNavigator>
         <div className={'character-list-container'}>

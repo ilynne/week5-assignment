@@ -3,22 +3,37 @@ import React from 'react';
 export default class CharacterPageNavigator extends React.Component {
 
   handleNextPrevClick = (e) => {
-    this.props.setCharacterListUrl(e.target.value)
+    this.props.setCharacterListPageNumber(e.target.value)
   }
 
   render() {
-    const { count, pages, next, prev } = this.props.info;
+    const { characterListPageNumber } = this.props
+    const { count, pages } = this.props.info;
+    const pageNumbers = [...Array(pages).keys()]
 
     return (
-      <div>
-        { prev
-          ? <button value={prev} onClick={this.handleNextPrevClick}>Prev</button>
-          : null
-        }
-        { next
-          ? <button value={next} onClick={this.handleNextPrevClick}>Next</button>
-          : null
-        }
+      <div className={'character-list-navigator'}>
+        <span>Go to page:</span>
+        <button value={1}
+                onClick={this.handleNextPrevClick}
+                disabled={characterListPageNumber === 1}>First</button>
+        <button value={characterListPageNumber - 1}
+                onClick={this.handleNextPrevClick}
+                disabled={characterListPageNumber === 1}>Prev</button>
+        <select name={'page-selector'}
+                value={characterListPageNumber}
+                onChange={this.handleNextPrevClick}
+        >
+          {pageNumbers.map(pageNumber => (
+            <option value={pageNumber+1}>{pageNumber+1}</option>
+          ))}
+        </select>
+        <button value={characterListPageNumber + 1}
+                onClick={this.handleNextPrevClick}
+                disabled={characterListPageNumber === pages}>Next</button>
+        <button value={pages}
+                onClick={this.handleNextPrevClick}
+                disabled={characterListPageNumber === pages}>Last</button>
       </div>
     )
   }

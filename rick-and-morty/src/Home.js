@@ -8,12 +8,13 @@ export default class Home extends React.Component {
       info: {},
       results: []
     },
-    characterListUrl: 'https://rickandmortyapi.com/api/character/'
+    characterListPageNumber: 1,
+    pages: 1
   }
 
   getCharacters = () => {
     this.setState({ isLoading: true }, () => {
-      fetch(this.state.characterListUrl)
+      fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.characterListPageNumber}`)
         .then(result => result.json())
         .then(data => this.setState({ response: data, isLoading: false }))
     });
@@ -23,10 +24,9 @@ export default class Home extends React.Component {
     this.getCharacters();
   }
 
-  setCharacterListUrl = (characterListUrl) => {
-    console.log(characterListUrl)
+  setCharacterListPageNumber = (characterListPageNumber) => {
     this.setState({
-      characterListUrl: characterListUrl
+      characterListPageNumber: Number(characterListPageNumber)
     }, this.getCharacters())
   }
 
@@ -39,7 +39,8 @@ export default class Home extends React.Component {
           isLoading={this.state.isLoading}
           results={results}
           info={info}
-          setCharacterListUrl={this.setCharacterListUrl}
+          characterListPageNumber={this.state.characterListPageNumber}
+          setCharacterListPageNumber={this.setCharacterListPageNumber}
         >
         </CharacterList>}
       </div>

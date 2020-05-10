@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=VT323&display=swap');
 // try Roboto font for body
 
 body {
   background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -33,7 +38,6 @@ button {
   max-width: 300px;
   &:hover {
     box-shadow: 0 0 6px 1px chartreuse;
-    cursor: pointer;
   }
 }
 
@@ -60,4 +64,39 @@ button {
   display: table-cell;
   vertical-align: middle;
   width: 300px;
+}
+
+.character-detail-container {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  grid-template-areas:
+    "polaroid information";
+  >.character-container {
+    grid-area: polaroid;
+  }
+  >.character-information-container {
+    padding-right: 0.5em;
+    grid-area: information;
+  }
+}
+
+table.character-information-form {
+  margin-top: 0.5em;
+  border-collapse: collapse;
+  width: 100%;
+  & td {
+    border: 1px solid darkgray;
+    >.form-label, .form-info {
+      display: block;
+    }
+    >.form-label {
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    >.form-info {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5em;
+      padding: 3px;
+    }
+  }
 }

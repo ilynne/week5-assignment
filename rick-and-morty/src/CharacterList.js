@@ -3,20 +3,49 @@ import Character from './Character';
 import CharacterPageNavigator from './CharacterPageNavigator';
 
 export default class CharacterList extends React.Component {
+  state = {
+    isLoading: false,
+    response: {
+      info: {},
+      results: []
+    },
+    characterListPageNumber: 1,
+    pages: 1
+  }
+
+  getCharacters = () => {
+    this.setState({ isLoading: true }, () => {
+      fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.characterListPageNumber}`)
+        .then(result => result.json())
+        .then(data => this.setState({ response: data, isLoading: false }))
+    });
+  }
+
+  componentDidMount = () => {
+    this.getCharacters();
+  }
+
+  setCharacterListPageNumber = (characterListPageNumber) => {
+    this.setState({
+      characterListPageNumber: Number(characterListPageNumber)
+    }, this.getCharacters())
+  }
+
 
   render() {
-    const { results, info } = this.props
+    const { response } = this.state
+    const { results, info } = response
     // const results = [this.props.results[0]]
     return (
       <div>
         <CharacterPageNavigator
           info={info}
-          characterListPageNumber={this.props.characterListPageNumber}
-          setCharacterListPageNumber={this.props.setCharacterListPageNumber}
+          characterListPageNumber={this.characterListPageNumber}
+          setCharacterListPageNumber={this.setCharacterListPageNumber}
         >
         </CharacterPageNavigator>
         <div className={'character-list-container'}>
-          { this.props.isLoading
+          { this.state.isLoading
             ? <p>Loading characters...</p>
             : results.map(character => (
               <Character

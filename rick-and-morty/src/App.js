@@ -4,11 +4,13 @@ import './App.scss';
 import './RickAndMorty.scss'
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import Navigation from './Navigation';
 
 function App() {
   return (
     <div className={'main-content-container'}>
       <Router>
+        <Navigation></Navigation>
         <Switch>
           <Route path="/" exact component={CharacterList} />
           <Route path="/character/:id" exact component={CharacterDetail} />

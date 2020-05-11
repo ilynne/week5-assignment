@@ -8,7 +8,7 @@ export default class CharacterPageNavigator extends React.Component {
 
   render() {
     const { characterListPageNumber } = this.props
-    const { count, pages } = this.props.info;
+    const { pages } = this.props.info;
     const pageNumbers = [...Array(pages).keys()]
 
     return (
@@ -24,8 +24,13 @@ export default class CharacterPageNavigator extends React.Component {
                 value={characterListPageNumber}
                 onChange={this.handleNextPrevClick}
         >
-          {pageNumbers.map(pageNumber => (
-            <option value={pageNumber+1}>{pageNumber+1}</option>
+          {pageNumbers.map(pageNumber=> (
+            <option
+              value={pageNumber+1}
+              key={`page-number${pageNumber}`}
+            >
+              {pageNumber+1}
+            </option>
           ))}
         </select>
         <button value={characterListPageNumber + 1}

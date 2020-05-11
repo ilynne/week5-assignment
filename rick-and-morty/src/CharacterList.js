@@ -40,7 +40,7 @@ export default class CharacterList extends React.Component {
       <div>
         <CharacterPageNavigator
           info={info}
-          characterListPageNumber={this.characterListPageNumber}
+          characterListPageNumber={this.state.characterListPageNumber}
           setCharacterListPageNumber={this.setCharacterListPageNumber}
         >
         </CharacterPageNavigator>

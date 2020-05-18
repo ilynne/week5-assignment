@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rick-and-morty/static/css/main.fcb15aac.chunk.css",
-    "main.js": "/rick-and-morty/static/js/main.3470e93a.chunk.js",
-    "main.js.map": "/rick-and-morty/static/js/main.3470e93a.chunk.js.map",
-    "runtime-main.js": "/rick-and-morty/static/js/runtime-main.5ff325dc.js",
-    "runtime-main.js.map": "/rick-and-morty/static/js/runtime-main.5ff325dc.js.map",
-    "static/js/2.f48b43b6.chunk.js": "/rick-and-morty/static/js/2.f48b43b6.chunk.js",
-    "static/js/2.f48b43b6.chunk.js.map": "/rick-and-morty/static/js/2.f48b43b6.chunk.js.map",
-    "index.html": "/rick-and-morty/index.html",
-    "precache-manifest.4440cf73d157c6936ef3ed2b919e18c6.js": "/rick-and-morty/precache-manifest.4440cf73d157c6936ef3ed2b919e18c6.js",
-    "service-worker.js": "/rick-and-morty/service-worker.js",
-    "static/css/main.fcb15aac.chunk.css.map": "/rick-and-morty/static/css/main.fcb15aac.chunk.css.map",
-    "static/js/2.f48b43b6.chunk.js.LICENSE.txt": "/rick-and-morty/static/js/2.f48b43b6.chunk.js.LICENSE.txt"
+    "main.css": "/week5-assignment/static/css/main.fcb15aac.chunk.css",
+    "main.js": "/week5-assignment/static/js/main.e5c14055.chunk.js",
+    "main.js.map": "/week5-assignment/static/js/main.e5c14055.chunk.js.map",
+    "runtime-main.js": "/week5-assignment/static/js/runtime-main.4f801440.js",
+    "runtime-main.js.map": "/week5-assignment/static/js/runtime-main.4f801440.js.map",
+    "static/js/2.f48b43b6.chunk.js": "/week5-assignment/static/js/2.f48b43b6.chunk.js",
+    "static/js/2.f48b43b6.chunk.js.map": "/week5-assignment/static/js/2.f48b43b6.chunk.js.map",
+    "index.html": "/week5-assignment/index.html",
+    "precache-manifest.51d2de80d62cb6e03d5b7c8ea89ae801.js": "/week5-assignment/precache-manifest.51d2de80d62cb6e03d5b7c8ea89ae801.js",
+    "service-worker.js": "/week5-assignment/service-worker.js",
+    "static/css/main.fcb15aac.chunk.css.map": "/week5-assignment/static/css/main.fcb15aac.chunk.css.map",
+    "static/js/2.f48b43b6.chunk.js.LICENSE.txt": "/week5-assignment/static/js/2.f48b43b6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ff325dc.js",
+    "static/js/runtime-main.4f801440.js",
     "static/js/2.f48b43b6.chunk.js",
     "static/css/main.fcb15aac.chunk.css",
-    "static/js/main.3470e93a.chunk.js"
+    "static/js/main.e5c14055.chunk.js"
   ]
 }

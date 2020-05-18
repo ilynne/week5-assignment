@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function CharacterPolaroid(props) {
   const { image, name, created } = props
@@ -11,4 +12,10 @@ export default function CharacterPolaroid(props) {
       <div className={'caption'}>{name}</div>
     </div>
   )
+}
+
+CharacterPolaroid.propTypes = {
+  created: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
 }

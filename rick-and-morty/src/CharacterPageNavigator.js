@@ -1,6 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class CharacterPageNavigator extends React.Component {
+  static propTypes = {
+    characterListPageNumber: PropTypes.number.isRequired,
+    info: PropTypes.shape({
+      count: PropTypes.number,
+      next: PropTypes.string,
+      pages: PropTypes.number,
+      prev: PropTypes.string,
+    }),
+    setCharacterListPageNumber: PropTypes.func.isRequired,
+  }
 
   handleNextPrevClick = (e) => {
     this.props.setCharacterListPageNumber(e.target.value)

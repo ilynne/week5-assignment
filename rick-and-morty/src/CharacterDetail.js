@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import CharacterPolaroid from './CharacterPolaroid';
 
 export default class CharacterDetail extends React.Component {

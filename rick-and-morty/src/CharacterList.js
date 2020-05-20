@@ -35,7 +35,6 @@ export default class CharacterList extends React.Component {
   render() {
     const { response } = this.state
     const { results, info } = response
-    // const results = [this.props.results[0]]
     return (
       <div>
         <CharacterPageNavigator

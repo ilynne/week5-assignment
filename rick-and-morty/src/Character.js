@@ -29,7 +29,7 @@ export default class Character extends React.Component {
   render() {
     const { id, name, image, created } = this.props.character
     return (
-      <Link to={`/character/${id}`}>
+      <Link to={`/week5-assignment/character/${id}`}>
         <CharacterPolaroid
           name={name}
           image={image}

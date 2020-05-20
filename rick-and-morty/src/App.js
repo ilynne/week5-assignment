@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Navigation></Navigation>
         <Switch>
-          <Route path="/" exact component={CharacterList} />
-          <Route path="/character/:id" exact component={CharacterDetail} />
+          <Route path="/week5-assignment/" exact component={CharacterList} />
+          <Route path="/week5-assignment/character/:id" exact component={CharacterDetail} />
         </Switch>
       </Router>
     </div>
